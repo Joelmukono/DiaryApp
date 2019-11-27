@@ -1,0 +1,13 @@
+<h1>My Diary</h1>
+
+
+
+<app-entries-form></app-entries-form>
+
+<ul>
+    <li *ngFor="let mEntry of entries ">
+        {{mEntry.entry}}
+        <button (click)= 'deleteEntry(i)'>Delete Entry</button>
+    </li>
+    
+</ul>
