@@ -1,6 +1,6 @@
 export class Diary {
      
-    constructor(public entry :string){
+    constructor(public title:string,public entry :string,public date:Date){
 
     }
 }

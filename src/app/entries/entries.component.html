@@ -2,11 +2,11 @@
 
 
 
-<app-entries-form></app-entries-form>
+<app-entries-form (addEntry)="addNewEntry($event)"></app-entries-form>
 
 <ul>
-    <li *ngFor="let mEntry of entries ">
-        {{mEntry.entry}}
+    <li *ngFor="let mEntry of entries;let i=index ">
+       <p appHighlight>{{mEntry.title}}</p> | <p>{{mEntry.entry}}</p>  | <p>{{mEntry.date}}</p>
         <button (click)= 'deleteEntry(i)'>Delete Entry</button>
     </li>
     

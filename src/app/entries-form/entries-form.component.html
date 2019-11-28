@@ -1,17 +1,28 @@
 <div class="container-fluid">
-        <h2 class="text-center">Create a new Goal</h2>
+        <h2 class="text-center">Create a new Entry</h2>
         <hr>
-        <form>
+        <form (ngSubmit)='submitEntry()' #goalForm='ngForm'>
+                <div class="form-group">
+      
+                        <label for="description">Title</label>
+                        <input class="form-control" id="description" id="diaryTitle"
+                         name="diaryTitle" [(ngModel)]="diaryTitle" rows="4" required>
+                        
+              
+                    </div>
             <div class="form-group">
       
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="4" required></textarea>
+                <textarea class="form-control" id="description" id="diaryEntry"
+                 name="diaryEntry" [(ngModel)]="diaryEntry" rows="4" required></textarea>
+                
       
             </div>
             <div class="form-group">
                 <label for="complete">Completion</label>
-                <input type='date' id="complete" required>
+                <input type='date' id="complete" name="setDate" [(ngModel)]='setDate' required>
       
             </div>
+            <button type="submit" class="btn btn-success">Add Entry</button>
         </form>
       </div>

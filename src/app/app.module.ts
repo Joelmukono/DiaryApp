@@ -4,15 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { EntriesComponent } from './entries/entries.component';
 import { EntriesFormComponent } from './entries-form/entries-form.component';
+import { FormsModule } from '@angular/forms';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntriesComponent,
-    EntriesFormComponent
+    EntriesFormComponent,
+    HighlightDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
